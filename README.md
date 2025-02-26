@@ -28,7 +28,6 @@ Uttarakhand, often referred to as the "Land of the Gods," is a paradise nestled 
 
 2. **Open index.html in your browser**
 3. **Enjoy Newsletter, blogging and payment feature**
-4. **Site Live at** [https://negiadarsh.github.io/uttarakhand-tour/]
 
 ## Contribution
 We welcome contributions from the community to make this platform even better. 
