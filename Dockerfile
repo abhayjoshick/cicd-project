@@ -1,13 +1,17 @@
-FROM node:alpine
+# Use the official Nginx image as the base image
+FROM nginx:latest
 
-WORKDIR /nodejs-docker-aws-ecs
+# Set the working directory
+WORKDIR /usr/share/nginx/html
 
-COPY package.json .
+# Remove the default Nginx static files
+RUN rm -rf ./*
 
-RUN npm install
+# Copy your HTML files into the container
+COPY html /usr/share/nginx/html/
 
-COPY . .
+# Expose port 80 for web traffic
+EXPOSE 80
 
-EXPOSE 3000
-
-CMD [ "node", "app.js" ]
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]
