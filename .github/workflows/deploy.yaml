@@ -52,7 +52,8 @@ jobs:
         with:
           name: image-definitions
           path: imageDefinitions.json
-            - name: Deploy to ECS
+          
+      - name: Deploy to ECS
         run: |
           aws ecs update-service --cluster cicd --service cicd-service-2 --force-new-deployment
 
