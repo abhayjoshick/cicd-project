@@ -48,7 +48,7 @@ jobs:
           echo '[{"name":"${{ secrets.CONTAINER_NAME }}","imageUri":"'"$REPOSITORY_URI:$IMAGE_TAG"'"}]' > imageDefinitions.json
 
       - name: Upload Image Definitions Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: image-definitions
           path: imageDefinitions.json
